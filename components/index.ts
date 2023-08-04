@@ -7,7 +7,7 @@ import SearchBar from "./SearchBar";
 import SearchMenuFacture from "./SearchMenuFacture";
 import CarCard from "./CarCard";
 import CarDetails from "./CarDetails"
-
+import ShowMore from './ShowMore'
 export {
     Hero,
     CustomButton,
@@ -17,5 +17,6 @@ export {
     SearchBar,
     SearchMenuFacture,
     CarCard,
-    CarDetails
+    CarDetails,
+    ShowMore
 }

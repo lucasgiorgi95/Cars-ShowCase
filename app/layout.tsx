@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 
 
 export const metadata: Metadata = {
-  title: 'Car Hub',
+  title: 'Automoviles',
   description: 'Discover the best cars in the world',
 }
 
