@@ -8,7 +8,7 @@ import { manufacturers } from "@/constants";
 
 function SearchMenuFacture({
   manufacturer,
-  setManufacturer,
+  setManuFacturer,
 }: SearchManuFacturerProps) {
   const [query, setQuery] = useState("");
 
@@ -24,7 +24,7 @@ function SearchMenuFacture({
 
   return (
     <div className="search-manufacturer">
-      <Combobox value={manufacturer} onChange={setManufacturer}>
+      <Combobox value={manufacturer} onChange={setManuFacturer}>
         <div className="relative w-full">
           
           <Combobox.Button className="absolute top-[14px]">
