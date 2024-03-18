@@ -1,24 +1,25 @@
-"use client"
-import React, { useState } from 'react'
-import Image from 'next/image'
-import { CarProps } from '@/types'
-import { CarDetails, CustomButton } from '.'
-import { calculateCarRent, generateCarImageUrl } from '@/utils'
+"use client";
 
-interface CarCardProps{
-  car: CarProps
+import { useState } from "react";
+import Image from "next/image";
+
+import { calculateCarRent, generateCarImageUrl } from "../utils";
+import { CarProps } from "@/types";
+import CustomButton from "./CustomButton";
+import CarDetails from "./CarDetails";
+
+interface CarCardProps {
+  car: CarProps;
 }
 
-function CarCard({car}:CarCardProps) {
+const CarCard = ({ car }: CarCardProps) => {
+  const { city_mpg, year, make, model, transmission, drive } = car;
 
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
-  const {city_mpg, year, make, model, transmission, drive} = car
-
-  const carRent = calculateCarRent(city_mpg, year)
+  const carRent = calculateCarRent(city_mpg, year);
 
   return (
-
     <div className="car-card group">
       <div className="car-card__content">
         <h2 className="car-card__content-title">
@@ -64,9 +65,10 @@ function CarCard({car}:CarCardProps) {
           />
         </div>
       </div>
-      <CarDetails  isOpen={isOpen} closeModal={()=> setIsOpen(false)} car={car}/>
-    </div>
-  )
-}
 
-export default CarCard
+      <CarDetails isOpen={isOpen} closeModal={() => setIsOpen(false)} car={car} />
+    </div>
+  );
+};
+
+export default CarCard;
