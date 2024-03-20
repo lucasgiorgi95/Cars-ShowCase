@@ -45,6 +45,9 @@
 .hero__title {
   @apply 2xl:text-[72px] sm:text-[64px] text-[50px] font-extrabold;
 }
+.loading {
+  @apply 2xl:text-[82px] sm:text-[74px] text-[60px] font-extrabold;
+}
 
 .hero__subtitle {
   @apply text-[27px] text-black-100 font-light mt-5;
